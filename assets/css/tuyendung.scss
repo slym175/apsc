@@ -1,0 +1,194 @@
+.homenext{
+    padding: 15px 0 15px 0;
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    .iconnext{
+        padding: 0 12px 0 12px; 
+    }
+    .homeitem{
+        font: {
+            family: Arial, Helvetica, sans-serif;
+            size: 16px;
+        }
+        color: #00387A;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+.titletext{
+    padding-bottom: 18px;
+    p{
+        font: {
+            weight: bold;
+            family: Arial, Helvetica, sans-serif;
+            size: 30px;
+        }
+        color: #494D52;
+    }
+}
+.contenttd{
+    border-top: 1px solid #E2E2E2;
+    padding: 15px 0 15px 0;
+    .khung-date{
+        width: 93%;
+        height: 68px;
+        background: #CA2026;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        padding: 9px;
+        line-height: 26px;
+        p{
+            font: {
+                weight: bold;
+                family: Arial, Helvetica, sans-serif;
+                size: 28px;
+            }
+        }
+        span{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+    }
+    .texttitle{
+        a{
+            display: block;
+            text-decoration: none;
+            color: #CA2026;
+            padding: 7px 0 16px 0;
+            transition: all 0.8s;
+            &:hover{
+                color: #202dcaf2;
+            }
+            font: {
+                weight: bold;
+                family: Arial, Helvetica, sans-serif;
+                size: 21px;
+            } 
+        }
+        ul{
+            display: flex;
+            li{
+                color: #494D52;
+                font-size: 16px;
+                font-family: Arial;
+                border-right: 1px solid #494D52;
+                padding: 0 23px 0 23px;
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+    
+    .btn-ut{
+        color: #fff;
+        background: #CA2026;
+        border-radius: 39px;
+        padding: 12px;
+        transition: all 0.8s;
+        &:hover{
+            
+            background: #42ca20;
+        }
+        font: {
+            weight: bold;
+            family: Arial, Helvetica, sans-serif;
+            size: 16px;
+        }
+    } 
+    
+}
+.phantrang{
+    border-top: 1px solid #E2E2E2;
+    padding: 25px 0 25px 0;
+    color: #00387A;
+    .item-number{
+        padding-right: 5px;
+    }
+}
+.modal-content{
+    font-family: Arial, Helvetica, sans-serif;
+    .modal-header{
+        border-bottom: none;
+        .logo{
+            background: #CA2026;
+            border-radius: 5px;
+            padding: 10px;
+            width: 34%;
+            img{
+                width: 95%;
+            }
+        }
+        .close{
+            padding: 0rem 1rem;
+            span{
+                font-size: 45px;
+            }
+        }
+    }
+    .modal-body{
+        .content-modal{
+            line-height: 28px;
+            span{
+                font-family: Arial, Helvetica, sans-serif;
+                color: #494D52;
+            }
+            p{
+                font-weight: bold;
+                font-size: 17px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .form-control{
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid #BFBABA;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            label{
+                color: #494D52;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+        }
+        .profile{
+            input::-webkit-input-placeholder{
+                font-size: 11px;
+                font-style: italic;
+            }
+            .btn{
+                width: 100%;
+                padding: .375rem .5rem;
+                img{
+                    width: 23%;
+                } 
+                span{
+                    font-size: 15px;
+                    padding-left: 6px;
+                }
+            }
+            .uploadfile{
+                background: #00387A;
+                color: #fff;
+            }
+        }
+    }
+    .modal-footer{
+        border-top: none;
+        .btn-submit{
+            background: #CA2026;
+            border-radius: 39px;
+            padding: 12px 33px;
+            color: #fff;
+        }
+    }
+}
