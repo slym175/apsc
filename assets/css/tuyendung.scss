@@ -11,7 +11,10 @@
             family: Arial, Helvetica, sans-serif;
             size: 16px;
         }
-        color: #00387A;
+        color: #5A5A5A;
+        &:last-child{
+            color: #00387A;
+        }
         &:hover{
             text-decoration: none;
         }
@@ -92,8 +95,7 @@
         border-radius: 39px;
         padding: 12px;
         transition: all 0.8s;
-        &:hover{
-            
+        &:hover{ 
             background: #42ca20;
         }
         font: {
