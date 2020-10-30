@@ -1,3 +1,14 @@
+@font-face {
+	font-family: ApscArial;
+	src: url(../fonts/Arial/ArialUnicodeMS.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,3 +57,192 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+}
+
+input, input:focus {
+	outline: none;
+}
+
+:root {
+	/* Font family */
+	--primary-font-family: ApscArial;
+	--secondary-font-family: Roboto;
+	/* Color */
+	--primary-text-color: #494D52;
+	--secondary-text-color: #CA2026;
+	--primary-color: #00387A;
+	--secondary-color: #2979D8;
+	--light-secondary-color: #5CA7FF;
+	--mb-menu-background: #000E32;
+	--mb-menu-lv1-color: #071F5D;
+	--mb-menu-lv2-color: #0A173A;
+}
+
+
+@media (min-width: 1400px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1320px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1530px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1840px;
+	}
+}
+
+[class^="icons-"],
+[class*="icons-"] {
+	background-image: url(../img/icons.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	background-size: 150px 150px !important;
+}
+
+.icons-search {
+	background-position: -4px -2px;
+    width: 17px;
+    height: 18px;
+	display: inline-block;
+	margin-right: 14px;
+	margin-left: 14px;
+}
+
+/* header */
+.header {
+	position: relative;
+	background-color: #F0F0F0;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	background-color: var(--primary-color);
+	bottom: 0;
+	left: 0;
+}
+
+.header .app-nav {
+	padding-bottom: 0;
+	align-items: flex-end;
+}
+
+.header .navbar-brand {
+	position: relative;
+	padding: .315rem;
+	background-color: #fff;
+}
+
+.header .navbar-brand::before,
+.header .navbar-brand::after  {
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	width: 0;
+	height: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.header .navbar-brand::before {
+	border-top: 24px solid #F0F0F0;
+	border-right: 13px solid #6B6B6B;
+	left: -13px;
+}
+
+.header .navbar-brand::after {
+	border-top: 24px solid #F0F0F0;
+	border-left: 13px solid #6B6B6B;
+	right: -13px;
+}
+
+.header .navbar-nav .nav-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header .navbar-nav .nav-link {
+	font: normal normal 14px/18px Arial;
+	color: #fff;
+	text-transform: uppercase;
+	max-height: 48px;
+	padding: 1rem;
+}
+
+.header .navbar-nav .nav-item:hover .nav-link,
+.header .navbar-nav .nav-item:active .nav-link,
+.header .navbar-nav .nav-item.active .nav-link {
+	background-color: #fff;
+	color: var(--primary-color);
+}
+
+.header .navbar-nav .submenu.mega-submenu {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+	padding: 2rem 2.5rem;
+	transition: .5s;
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+}
+
+.header .navbar-nav .nav-item:hover .submenu.mega-submenu {
+	top: 80px;
+	visibility: visible;
+	opacity: 1;
+	height: 100%;
+}
+
+.header .navbar-nav .submenu.mega-submenu > ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .navbar-nav .submenu.mega-submenu > ul{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	font: normal normal 16px/18px var(--primary-font-family);
+}
+
+/* .header .navbar-nav .submenu.mega-submenu > ul > li {
+	flex: auto;
+} */
+
+.header .navbar-nav .submenu.mega-submenu > ul > li > a{
+	line-height: 22px;
+	color: var(--secondary-text-color);
+	text-transform: uppercase;
+	padding-bottom: 9px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid #E2E2E2;
+	display: inline-block;
+}
+
+.header .navbar-nav .submenu.mega-submenu .submenu-lv2 a{
+	font: normal normal 16px/18px var(--primary-font-family);
+	display: inline-block;
+	color: var(--primary-text-color);
+	margin-bottom: 12px;
+}
+/* end header */
