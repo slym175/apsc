@@ -1,3 +1,23 @@
+$font-text: Arial, Helvetica, sans-serif;
+$backgroup-red: #CA2026;
+$backgroup-mauchu: #494D52;
+
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px; 
+    @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+        @content;   
+        } 
+    } 
+    @mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+        @content;   
+        } 
+    }  
+
+    @mixin desktop {   @media (min-width: #{$desktop-width}) {     
+        @content;  
+        } 
+    }
 .homenext{
     padding: 15px 0 15px 0;
     display: flex;
@@ -26,11 +46,15 @@
     p{
         font: {
             weight: bold;
-            family: Arial, Helvetica, sans-serif;
-            size: 30px;
-            
+            family: $font-text;
+            size: 30px;        
         }
-        color: #494D52;
+        @include mobile{
+            font: {
+                size: 19px;
+            }
+        }
+        color: $backgroup-mauchu;
         line-height: 139.99%;
     }
     ul{
@@ -38,18 +62,29 @@
         padding-top: 15px;
         padding-bottom: 20px;
         border-bottom: 1px solid #E2E2E2;
+        @include mobile{
+            display: block;
+            line-height: 2;
+        }
         li{
-            color: #494D52;
+            color:$backgroup-mauchu;
             font-size: 16px;
-            font-family: Arial;
-            border-right: 1px solid #494D52;
-            padding: 0 21px 0 21px;
+            font-family: $font-text;
+            border-right: 1px solid$backgroup-mauchu;
+            padding: 0 18.5px 0 18.5px;
             &:first-child{
                 padding-left: 0;
             }
             &:last-child{
                 padding-right: 0;
                 border: none;
+            }
+            @include mobile{
+                border: none;
+                padding-left: 0;
+            }
+            @include desktop{
+                font-size: 12px;
             }
         }
     }
@@ -59,14 +94,14 @@
     .motacv{
         p{
             line-height: 140.49%;
-            font-family: Arial;
+            font-family: $font-text;
             font-style: normal;
             font-weight: bold;  
             font-size: 16px;
             padding-bottom: 20px;
             &:first-child{
                 font-size: 21px;
-                color: #CA2026;
+                color: $backgroup-red;
             }
         }
         span{
@@ -76,7 +111,7 @@
             font-weight: normal;
             font-size: 16px;
             line-height: 140.49%;
-            color: #494D52;
+            color: $backgroup-mauchu;
             padding-bottom: 20px;
             padding-left: 25px;
             position: relative;
@@ -92,10 +127,15 @@
             }
         }
     }
-    .btn-utnow{
-        background: #CA2026;
+    .utnow{
+        @include mobile{
+            display: flex;
+            justify-content: center;
+        }
+       .btn-utnow{
+        background: $backgroup-red;
         border-radius: 39px;
-        font-family: Arial;
+        font-family: $font-text;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
@@ -107,10 +147,12 @@
         color: #FFFFFF;
         margin-top: 25px;
         transition: all 0.8s;
-        &:hover{ 
-            background: #42ca20;
-        }
+            &:hover{ 
+                background: #42ca20;
+            }
+        } 
     }
+    
     
 }
 .connect{
@@ -131,5 +173,62 @@
         &:last-child{
             background: #FFA013;
         }
+    }
+}
+
+.title-right{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    p{
+        background:$backgroup-red;
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 23px;
+        color: #FFFFFF;
+    }
+}
+.detail-khac{
+    padding: 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #E2E2E2;
+    .khung-date{
+        width: 70px;
+        height: 68px;
+        background: #EBEBEB;
+        border-radius: 5px;
+        color: $backgroup-mauchu;
+        text-align: center;
+        padding: 9px;
+        line-height: 26px;
+        p{
+            font: {
+                weight: bold;
+                family: $font-text;
+                size: 28px;
+            }
+        }
+        span{
+            font-family: $font-text;
+            font-size: 12px;
+        }
+    }
+    .intro{
+        p{
+            font-family: $font-text;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+            color: $backgroup-mauchu;
+        }
+        span{
+            font-family: $font-text;
+            font-size: 16px;
+            line-height: 25px;
+            color:$backgroup-mauchu; 
+        }
+        
     }
 }

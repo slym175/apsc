@@ -8,7 +8,9 @@
   .homenext .homeitem {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #00387A; }
+    color: #5A5A5A; }
+    .homenext .homeitem:last-child {
+      color: #00387A; }
     .homenext .homeitem:hover {
       text-decoration: none; }
 
