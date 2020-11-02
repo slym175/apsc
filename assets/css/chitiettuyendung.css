@@ -49,6 +49,9 @@
         .titletext ul li {
           border: none;
           padding-left: 0; } }
+      @media (min-width: 1024px) {
+        .titletext ul li {
+          font-size: 12px; } }
 
 .detail-td .motacv p {
   line-height: 140.49%;
