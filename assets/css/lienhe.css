@@ -1,0 +1,127 @@
+.contact-section {
+    font: normal normal 16px/24px var(--primary-font-family);
+    color: var(--primary-color);
+}
+
+.contact-section .bg-white {
+    position: relative;
+    box-shadow: 1px 1px 8px 1px rgba(27, 27, 27, 0.15);
+    padding: 2.5rem 2.5rem;
+}
+
+.contact-section .bg-white::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8%;
+    height: 100%;
+    background-color: var(--secondary-text-color);
+}
+
+.contact-section .cfc-contact h3 {
+    font-size: 24px;
+    line-height: 54px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.contact-section .cfc-contact h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 0;
+    border-bottom: 3px solid var(--secondary-text-color);
+}
+
+.contact-section .cfc-contact p {
+    margin-bottom: 18px;
+}
+
+.contact-section .cfc-contact .cf-input {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: unset;
+    border-bottom: 1px solid #E2E2E2;
+    padding: .5rem .15rem;
+    border-radius: unset;
+    outline: unset;
+}
+
+.contact-form .btn-primary {
+    display: block;
+    text-align: center;
+    color: #fff !important;
+    background-color: var(--secondary-text-color);
+}
+
+.contact-section .cfc-info {
+    position: relative;
+}
+
+.contact-section .cfc-info .cfc-info-container {
+    position: absolute;
+    z-index: 12;
+    top: 51%;
+    right: 0;
+    transform: translate(2.5rem, -50%);
+    background: #00387A;
+    padding: 40px 30px 10px 40px;
+    font: normal normal 16px/24px var(--primary-font-family);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section .cfc-info .cfc-info-container img {
+    margin-bottom: 40px;
+}
+
+.cfc-info-container .d-flex img {
+    width: 22px;
+    height: auto;
+    object-fit: fill;
+    object-position: 50% 50%;
+}
+
+.cfc-info-container .d-flex {
+    margin-bottom: 40px;
+}
+
+.cfc-info-container .d-flex h4 {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cfc-info-container .d-flex h4,
+.cfc-info-container .d-flex p {
+    text-align: left;
+}
+.btn-primary{
+    display: inline-block;
+    outline: none;
+    border-color: unset;
+    border: 1px solid var(--secondary-text-color);
+    font: normal bold 14px/21px var(--primary-font-family);
+    color: var(--secondary-color);
+    background-color: #fff;
+    border-radius: 5000px;
+    padding: .65rem 2.5rem;
+    text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+    .contact-section .cfc-info .cfc-info-container {
+        margin-top: 30px;
+        position: relative;
+        top: unset;
+        transform: translate(0, 0);
+        margin-right: calc(0px - 2.5rem - 15px);
+    }
+}
+
