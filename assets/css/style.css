@@ -1204,7 +1204,7 @@ input:focus {
 	font: normal bold 30px/34px var(--primary-font-family);
 	color: #3C3C3C;
 	position: relative;
-	padding-bottom: 6px;
+	padding-bottom: 12px;
 	margin-bottom: 2rem;
 }
 
@@ -2189,10 +2189,278 @@ input:focus {
 }
 
 .history-section {
-	background-image: url(../img/);
+	padding: 43px 0 90px;
+	background-image: url(../img/history.jpg);
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 } 
 
 .history-section .section-title-secondary {
 	color: #fff;
+	margin-bottom: 49px;
 }
+
+.history-section .history-content {
+	padding-top: 120px;
+	position: relative;
+}
+
+.history-section .history-content > .img-container {
+	text-align: center;
+}
+
+.history-section .history-content > .img-container > img {
+	width: 50%;
+	transform: translate(25%, 0);
+}
+
+.cylinder {
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* overflow: hidden; */
+	margin: 0 auto;
+	width: 120px;
+	height: 90px;
+	border-radius: 60px/30px;
+	background-color: rgba(160, 160, 160, 0.5);
+}
+
+.cylinder:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 120px;
+	height: 70px;
+	border-radius: 60px/30px;
+	background-color: rgba(160, 160, 160, 0.2);
+	content: '';
+}
+
+.cylinder.logo-cylinder .img-container {
+	text-align: center;
+}
+
+.cylinder.logo-cylinder{
+	background-image: linear-gradient(90deg, #F0EFEF 0%, #CECECE 100%, #FFFFFF 100%);
+	right: 18%;
+    top: 30%;
+}
+
+.cylinder.logo-cylinder::before {
+	background-image: linear-gradient(90deg, #C1C4C5 0.07%, #FDFEFF 100.02%);
+}
+
+.cylinder.logo-cylinder .img-container img {
+	width: 45%;
+	transform: translate(0, 5px);
+}
+
+.cylinder.cylinder-step-1{
+	background-image: linear-gradient(90deg, #3AEF8C 0.03%, #08A046 100.01%);
+	right: 35%;
+    top: 25%;
+}
+
+.cylinder.cylinder-step-1::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 25%;
+    left: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cylinder.cylinder-step-1::before {
+	background-image: linear-gradient(90deg, #88FFC0 -0.01%, #1DDD6B 100%);
+}
+
+.cylinder.cylinder-step-2{
+	background-image: linear-gradient(90deg, #FFAF3B 0.01%, #FF7B22 100.01%);
+	right: 33%;
+    top: 53%;
+}
+
+.cylinder.cylinder-step-2::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 25%;
+    right: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cylinder.cylinder-step-2::before {
+	background-image: linear-gradient(90deg, #FFE266 -0.01%, #FFA91F 100%);
+}
+
+.cylinder.cylinder-step-3{
+	background-image: linear-gradient(90deg, #FF73D7 0.06%, #8827C1 99.98%);
+	right: 50%;
+    top: 48%;
+}
+
+.cylinder.cylinder-step-3::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 25%;
+    left: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cylinder.cylinder-step-3::before {
+	background-image: linear-gradient(90deg, #FFA1E0 0%, #B752FF 100%);
+}
+
+.cylinder.cylinder-step-4{
+	background-image: linear-gradient(90deg, #FF6C8F 0.03%, #E5258E 99.99%);
+	right: 48%;
+    top: 76%;
+}
+
+.cylinder.cylinder-step-4::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 25%;
+    left: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cylinder.cylinder-step-4::before {
+	background-image: linear-gradient(90deg, #FF99AD 0%, #FF48A4 100%);
+}
+
+.cylinder p {
+	font: normal bold 36px/38px var(--primary-font-family);
+	color: #fff;
+	text-align: center;
+	transform: scale(.9) rotate(36deg)skew(-30deg,0) translate(0,0); 
+	-webkit-transform: scale(.9) rotate(36deg)skew(-30deg,0) translate(0,0);
+	-moz-transform: scale(.9) rotate(36deg)skew(-30deg,0) translate(0,0);
+	transform-origin: 50% 50%; 
+}
+
+.cylinder p * {
+	display: block;
+}
+
+.cylinder p .bb {
+	position: relative;
+	font: normal bold 36px/38px var(--primary-font-family);
+	color: #fff;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+.cylinder p .bb::before {
+	position: absolute;
+	content: "";
+	width: 38px;
+	height: 0;
+	border-bottom: 3px solid #fff;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.cylinder p small {
+	position: relative;
+	font: normal normal 16px/19px var(--primary-font-family);
+	color: #fff;
+	text-align: center;
+}
+
+.cylinder .cylinder-content {
+	position: absolute;
+	font: normal normal 16px/23px var(--secondary-font-family);
+	text-align: justify;
+	color: #fff;
+	width: 300px;
+}
+
+.cylinder .cylinder-content::before {
+	content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: .5rem;
+    left: -1.5rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cylinder.cylinder-step-1 .cylinder-content {
+	top: -175px;
+    left: 50px;
+}
+
+.cylinder.cylinder-step-2 .cylinder-content {
+	top: 175px;
+    left: 160px;
+}
+
+.cylinder.cylinder-step-4 .cylinder-content::before,
+.cylinder.cylinder-step-3 .cylinder-content::before {
+	top: .5rem;
+	right: -1.5rem;
+	left: unset;
+}
+
+.cylinder.cylinder-step-3 .cylinder-content {
+	top: -100px;
+    left: -500px;
+}
+
+.cylinder.cylinder-step-4 .cylinder-content {
+	top: 0;
+    left: -540px;
+}
+
+.cylinder .line {
+	width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cylinder.cylinder-step-1 .line::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	bottom: 75%;
+    left: 7px;
+	height: 187px;
+
+	 
+	border-left: 1px solid #fff;
+}
+
+.cylinder.cylinder-step-1 .line::after {
+	content: "";
+	position: absolute;
+	width: 18px;
+	top: -175px;
+    left: 50px;
+	height: 0;
+	border-top: 1px solid #fff;
+}
+
+
+
+/* .structure-section {
+
+} */
 /* end gioi thieu */

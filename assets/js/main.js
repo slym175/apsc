@@ -98,4 +98,6 @@ $(function () {
         $(this).parents('.sub-nav').find('li').removeClass('opened');
         $(this).parents('.have-subnav').toggleClass('opened')
     })
+
+    new WOW().init();
 });
