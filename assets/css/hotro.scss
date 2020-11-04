@@ -1,70 +1,86 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px; 
-    @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-        @content;   
-        } 
-    } 
-    @mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-        @content;   
-        } 
-    }  
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
-    @mixin desktop {   @media (min-width: #{$desktop-width}) {     
-        @content;  
-        } 
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
     }
-.homenext{
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.homenext {
     padding: 15px 0 15px 0;
     display: flex;
     justify-items: start;
     align-items: center;
-    .iconnext{
-        padding: 0 12px 0 12px; 
+
+    .iconnext {
+        padding: 0 12px 0 12px;
     }
-    .homeitem{
+
+    .homeitem {
         font: {
             family: Arial, Helvetica, sans-serif;
             size: 16px;
         }
+
         color: #5A5A5A;
-        &:last-child{
+
+        &:last-child {
             color: #00387A;
         }
-        &:hover{
+
+        &:hover {
             text-decoration: none;
         }
-        @include mobile{
+
+        @include mobile {
             font-size: 10px;
         }
     }
 }
 
-.titletext{
+.titletext {
     padding-bottom: 18px;
-    p{
+
+    p {
         font: {
             weight: bold;
-            family:Arial;
-            size: 30px;        
+            family: Arial;
+            size: 30px;
         }
-        @include mobile{
+
+        @include mobile {
             font: {
                 size: 19px;
             }
         }
+
         color: #494D52;
         line-height: 139.99%;
     }
 }
 
-.item-support{
+.item-support {
     display: flex;
     align-items: center;
     border-top: 1px solid #E2E2E2;
     border-bottom: 1px solid #E2E2E2;
     padding: 7px 0;
-    .khung-date{
+
+    .khung-date {
         width: 70px;
         height: 68px;
         background: #CA2026;
@@ -74,114 +90,138 @@ $desktop-width: 1024px;
         padding: 9px;
         line-height: 26px;
         justify-content: center;
-        p{
+
+        p {
             font: {
                 weight: bold;
                 family: Arial, Helvetica, sans-serif;
                 size: 28px;
             }
         }
-        span{
+
+        span {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
     }
-    label{
+
+    label {
         padding-left: 30px;
         font-size: 18px;
         font-family: Arial;
         color: #494D52;
         flex-grow: 1;
-        @include mobile{
+
+        @include mobile {
             padding-left: 15px;
         }
     }
-    .down{
+
+    .down {
         width: 34px;
         height: 34px;
         background: #CA2026;
         border-radius: 5px;
         padding: 8px;
-        
+
     }
 }
 
-.detail-support{
+.detail-support {
     padding-top: 22px;
-    .text-top{
-        i{
+
+    .text-top {
+        i {
             display: block;
             font-style: italic;
             font-family: Arial;
             font-size: 16px;
-            &:last-child{
+
+            &:last-child {
                 padding: 22px 0;
             }
         }
     }
-    img{
+
+    img {
         width: 100%;
     }
-    .text-bot{
+
+    .text-bot {
         padding-top: 27px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px;
-        h4{
+
+        h4 {
             font-weight: bold;
             padding-bottom: 27px;
-            @include mobile{
+
+            @include mobile {
                 padding-bottom: 10px;
             }
-            @include tablet{
+
+            @include tablet {
                 padding-bottom: 15px;
             }
         }
-        p{
+
+        p {
             padding-bottom: 27px;
-            @include mobile{
+
+            @include mobile {
                 line-height: 20px;
                 padding-bottom: 20px;
             }
-            @include tablet{
+
+            @include tablet {
                 padding-bottom: 15px;
                 line-height: 23px;
             }
         }
-        
+
     }
 }
 
-.category{
-    ul{
-        li{
+.category {
+    ul {
+        li {
             display: block;
             padding: 13px 0;
-            border-bottom:  1px solid #D0D0D0;
+            border-bottom: 1px solid #D0D0D0;
 
-            span{
+            span {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 16pxx;
             }
-            .show-right{
+
+            .show-right {
                 float: right;
                 cursor: pointer;
             }
-            ul{
+
+            ul {
                 background: #F3F3F3;
                 margin-top: 15px;
                 padding: 11px 11px;
                 border-top: 4px solid #CA2026;
-                li{
+
+                li {
                     border-bottom: none;
-                    a{
+
+                    a {
                         color: #494D52;
                         padding-left: 15px;
                     }
-                    span{
-                        color:  #494D52;;
+
+                    span {
+                        color: #494D52;
+                        ;
                     }
-                    &:hover{
-                        a,span{
+
+                    &:hover {
+
+                        a,
+                        span {
                             color: #CA2026;
                         }
                     }
@@ -190,5 +230,3 @@ $desktop-width: 1024px;
         }
     }
 }
-
-

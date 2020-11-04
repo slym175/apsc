@@ -1,46 +1,59 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px; 
-    @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-        @content;   
-        } 
-    } 
-    @mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-        @content;   
-        } 
-    }  
-
-    @mixin desktop {   @media (min-width: #{$desktop-width}) {     
-        @content;  
-        } 
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
     }
-.titletext{
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.titletext {
     padding-bottom: 18px;
-    p{
+
+    p {
         font: {
             weight: bold;
             family: Arial, Helvetica, sans-serif;
             size: 30px;
         }
+
         color: #494D52;
     }
 }
-.contenttd{
+
+.contenttd {
     border-top: 1px solid #E2E2E2;
     padding: 15px 0 15px 0;
-    &:hover{
-        .khung-date, .btn-ut{
-            background:#CA2026;
+
+    &:hover {
+
+        .khung-date,
+        .btn-ut {
+            background: #CA2026;
             color: #fff;
         }
-        .texttitle{
-            a{
-                color:#CA2026 ;
+
+        .texttitle {
+            a {
+                color: #CA2026;
             }
         }
     }
-    .khung-date{
+
+    .khung-date {
         width: 70px;
         height: 68px;
         background: #EBEBEB;
@@ -49,195 +62,238 @@ $desktop-width: 1024px;
         text-align: center;
         padding: 9px;
         line-height: 26px;
-        p{
+
+        p {
             font: {
                 weight: bold;
                 family: Arial, Helvetica, sans-serif;
                 size: 28px;
             }
         }
-        span{
+
+        span {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
     }
-    .texttitle{
-        a{
+
+    .texttitle {
+        a {
             display: block;
             text-decoration: none;
             color: #494D52;
             padding: 7px 0 16px 0;
             text-align: justify;
+
             font: {
                 weight: bold;
                 family: Arial, Helvetica, sans-serif;
                 size: 21px;
-            } 
-            @include mobile{
+            }
+
+            @include mobile {
                 font-size: 17px;
             }
-            @include tablet{
+
+            @include tablet {
                 padding-bottom: 7px;
                 padding-top: 0;
             }
         }
-        ul{
+
+        ul {
             display: flex;
-            li{
+
+            li {
                 color: #494D52;
                 font-size: 16px;
                 font-family: Arial;
                 border-right: 1px solid #494D52;
                 padding: 0 23px 0 23px;
-                &:first-child{
+
+                &:first-child {
                     padding-left: 0;
                 }
-                &:last-child{
+
+                &:last-child {
                     border: none;
                 }
-                @include tablet{
+
+                @include tablet {
                     font-size: 13px;
                     padding: 0 13px 0 13px;
                 }
             }
-            @include mobile{
+
+            @include mobile {
                 display: none;
             }
         }
-        @include mobile{
+
+        @include mobile {
             padding-left: 0px;
         }
-        @include tablet{
+
+        @include tablet {
             padding-left: 35px;
         }
     }
-    
-    .btn-ut{
+
+    .btn-ut {
         color: #494D52;
         background: #fff;
         border-radius: 39px;
         border: 1px solid #8F8F8F;
         padding: 12px;
+
         font: {
             weight: bold;
             family: Arial, Helvetica, sans-serif;
             size: 16px;
         }
-        @include mobile{
-          padding: .375rem .75rem;
+
+        @include mobile {
+            padding: .375rem .75rem;
         }
-        @include tablet{
+
+        @include tablet {
             margin-top: 10px;
             padding: .375rem .75rem;
         }
-    } 
-    
+    }
+
 }
-.phantrang{
+
+.phantrang {
     border-top: 1px solid #E2E2E2;
     padding: 0 0 25px 0;
     color: #00387A;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    @include mobile{
+
+    @include mobile {
         justify-content: center;
     }
-    @include tablet{
+
+    @include tablet {
         justify-content: center;
     }
-    .item-number{
+
+    .item-number {
         padding-right: 5px;
     }
 }
-.modal-content{
+
+.modal-content {
     font-family: Arial, Helvetica, sans-serif;
-    .modal-header{
+
+    .modal-header {
         border-bottom: none;
-        .logo{
+
+        .logo {
             background: #CA2026;
             border-radius: 5px;
             padding: 10px;
             width: 34%;
-            img{
+
+            img {
                 width: 95%;
             }
         }
-        .close{
+
+        .close {
             padding: 0rem 1rem;
-            span{
+
+            span {
                 font-size: 45px;
             }
         }
     }
-    .modal-body{
-        .content-modal{
+
+    .modal-body {
+        .content-modal {
             line-height: 28px;
-            span{
+
+            span {
                 font-family: Arial, Helvetica, sans-serif;
                 color: #494D52;
             }
-            p{
+
+            p {
                 font-weight: bold;
                 font-size: 17px;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            .input-group{
-                span{
+
+            .input-group {
+                span {
                     position: absolute;
                     top: 22%;
                     right: 0;
                     z-index: 1;
-                    &:hover{
+
+                    &:hover {
                         cursor: pointer;
                     }
                 }
             }
-            .form-control{
+
+            .form-control {
                 padding: 0;
                 border: none;
                 border-radius: 0;
                 border-bottom: 1px solid #BFBABA;
-                &:focus{
+
+                &:focus {
                     box-shadow: none;
                     z-index: 0;
                 }
             }
-            label{
+
+            label {
                 color: #494D52;
                 font-weight: bold;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 16px;
             }
         }
-        .profile{
-            input::-webkit-input-placeholder{
+
+        .profile {
+            input::-webkit-input-placeholder {
                 font-size: 11px;
                 font-style: italic;
             }
-            .btn{
+
+            .btn {
                 width: 100%;
                 padding: .375rem .5rem;
-                img{
+
+                img {
                     width: 23%;
-                    @include mobile{
+
+                    @include mobile {
                         width: 18%;
                     }
-                } 
-                span{
+                }
+
+                span {
                     font-size: 15px;
                     padding-left: 6px;
                 }
             }
-            .uploadfile{
+
+            .uploadfile {
                 background: #00387A;
                 color: #fff;
             }
         }
     }
-    .modal-footer{
+
+    .modal-footer {
         border-top: none;
-        .btn-submit{
+
+        .btn-submit {
             background: #CA2026;
             border-radius: 39px;
             padding: 12px 33px;
@@ -245,26 +301,30 @@ $desktop-width: 1024px;
         }
     }
 
-    .adress-work{
-        position: absolute; 
-        top: 43.6%; 
-        width: 100%; 
+    .adress-work {
+        position: absolute;
+        top: 43.6%;
+        width: 100%;
         padding: 0 15px;
-        @include mobile{
+
+        @include mobile {
             top: 42%;
         }
-        .card-body{
+
+        .card-body {
             padding: 0;
-            ul{
-                li{
+
+            ul {
+                li {
                     padding: 15px;
                     border-bottom: 1px solid #cccccc5c;
-                    &:hover{
+
+                    &:hover {
                         background-color: #cccccc21;
                     }
                 }
             }
         }
-        
+
     }
 }

@@ -64,7 +64,8 @@
 .contact-section .cfc-info {
     position: relative;
 }
-.contact-section .cfc-info .smal{
+
+.contact-section .cfc-info .smal {
     width: 33px;
     height: 32px;
     position: absolute;
@@ -74,6 +75,7 @@
     background: var(--secondary-text-color);
     opacity: 0.5;
 }
+
 .contact-section .cfc-info .cfc-info-container {
     position: absolute;
     z-index: 12;
@@ -111,7 +113,8 @@
 .cfc-info-container .d-flex p {
     text-align: left;
 }
-.btn-primary{
+
+.btn-primary {
     display: inline-block;
     outline: none;
     border-color: unset;
@@ -133,4 +136,3 @@
         margin-right: calc(0px - 2.5rem - 15px);
     }
 }
-
