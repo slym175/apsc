@@ -89,14 +89,22 @@ $(function () {
 
     $('.angle-open').click(function(e) {
         e.preventDefault();
-        $(this).parents('.left-nav').find('.nav-item').removeClass('opened');
-        $(this).parents('.nav-item').toggleClass('opened');
+        if($(this).parents('.nav-item').hasClass('opened')) {
+            $(this).parents('.nav-item').removeClass('opened');
+        }else{
+            $(this).parents('.left-nav').find('.nav-item').removeClass('opened');
+            $(this).parents('.nav-item').toggleClass('opened');
+        }
     })
 
     $('.angle-open-lv2').click(function(e) {
         e.preventDefault();
-        $(this).parents('.sub-nav').find('li').removeClass('opened');
-        $(this).parents('.have-subnav').toggleClass('opened')
+        if($(this).parents('.have-subnav').hasClass('opened')) {
+            $(this).parents('.have-subnav').removeClass('opened');
+        }else{
+            $(this).parents('.sub-nav').find('li').removeClass('opened');
+            $(this).parents('.have-subnav').toggleClass('opened');
+        }
     })
 
     new WOW().init();
