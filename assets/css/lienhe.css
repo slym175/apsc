@@ -64,7 +64,16 @@
 .contact-section .cfc-info {
     position: relative;
 }
-
+.contact-section .cfc-info .smal{
+    width: 33px;
+    height: 32px;
+    position: absolute;
+    top: -2%;
+    left: 4%;
+    z-index: 1000;
+    background: var(--secondary-text-color);
+    opacity: 0.5;
+}
 .contact-section .cfc-info .cfc-info-container {
     position: absolute;
     z-index: 12;

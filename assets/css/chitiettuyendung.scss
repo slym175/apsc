@@ -71,7 +71,7 @@ $desktop-width: 1024px;
             font-size: 16px;
             font-family: $font-text;
             border-right: 1px solid$backgroup-mauchu;
-            padding: 0 18.5px 0 18.5px;
+            padding: 0 13px 0 13px;
             &:first-child{
                 padding-left: 0;
             }
@@ -83,14 +83,16 @@ $desktop-width: 1024px;
                 border: none;
                 padding-left: 0;
             }
-            @include desktop{
-                font-size: 12px;
+            @include tablet{
+                font-size: 14px;
             }
         }
     }
 }
 
 .detail-td{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E3E0E4;
     .motacv{
         p{
             line-height: 140.49%;
@@ -151,29 +153,7 @@ $desktop-width: 1024px;
                 background: #42ca20;
             }
         } 
-    }
-    
-    
-}
-.connect{
-    border-top: 1px solid #E3E0E4;
-    border-bottom: 1px solid #E3E0E4;
-    padding: 15px 0;
-    margin-top: 30px;
-    span{
-       display: flex;
-       align-items: center;
-    }
-    .iconconnect{
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: #FF4A58;
-        margin-left: 20px;
-        &:last-child{
-            background: #FFA013;
-        }
-    }
+    } 
 }
 
 .title-right{
@@ -216,6 +196,9 @@ $desktop-width: 1024px;
         }
     }
     .intro{
+        @include mobile{
+            padding-left: 0px;
+        }
         p{
             font-family: $font-text;
             font-weight: bold;
