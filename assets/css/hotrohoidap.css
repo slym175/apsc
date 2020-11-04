@@ -1,19 +1,3 @@
-.homenext {
-  padding: 15px 0 15px 0;
-  display: flex;
-  justify-items: start;
-  align-items: center; }
-  .homenext .iconnext {
-    padding: 0 12px 0 12px; }
-  .homenext .homeitem {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #5A5A5A; }
-    .homenext .homeitem:last-child {
-      color: #00387A; }
-    .homenext .homeitem:hover {
-      text-decoration: none; }
-
 .titletext {
   padding-bottom: 18px; }
   .titletext p {
@@ -59,41 +43,43 @@
     flex-grow: 1; }
     @media (max-width: 479px) {
       .item-group span {
+        line-height: 23px;
         padding-left: 10px; } }
   .item-group .btn-show {
     background-color: #EBEBEB; }
     .item-group .btn-show:focus {
       box-shadow: none; }
 
-.category {
-  padding-top: 40px; }
-  .category ul li {
-    display: block;
-    padding: 13px 0;
-    border-bottom: 1px solid #D0D0D0; }
-    .category ul li span {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16pxx; }
-    .category ul li .show-right {
-      float: right;
-      cursor: pointer; }
-    .category ul li ul {
-      background: #F3F3F3;
-      margin-top: 15px;
-      padding: 11px 11px;
-      border-top: 4px solid #CA2026; }
-      .category ul li ul li {
-        border-bottom: none; }
-        .category ul li ul li a {
-          color: #494D52;
-          padding-left: 15px; }
-        .category ul li ul li span {
-          color: #494D52; }
-        .category ul li ul li:hover a, .category ul li ul li:hover span {
-          color: #CA2026; }
+.category ul li {
+  display: block;
+  padding: 13px 0;
+  border-bottom: 1px solid #D0D0D0; }
+  .category ul li:hover {
+    font-weight: bold; }
+  .category ul li span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pxx; }
+  .category ul li .show-right {
+    float: right;
+    cursor: pointer; }
+  .category ul li ul {
+    background: #F3F3F3;
+    margin-top: 15px;
+    padding: 11px 11px;
+    border-top: 4px solid #CA2026; }
+    .category ul li ul li {
+      font-weight: normal;
+      border-bottom: none; }
+      .category ul li ul li a {
+        color: #494D52;
+        padding-left: 15px; }
+      .category ul li ul li span {
+        color: #494D52; }
+      .category ul li ul li:hover a, .category ul li ul li:hover span {
+        color: #CA2026; }
 
 .phantrang {
-  padding-top: 26px;
+  padding: 15px;
   display: flex;
   justify-content: center; }
   .phantrang .page-item {

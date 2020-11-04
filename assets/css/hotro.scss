@@ -92,6 +92,9 @@ $desktop-width: 1024px;
         font-family: Arial;
         color: #494D52;
         flex-grow: 1;
+        @include mobile{
+            padding-left: 15px;
+        }
     }
     .down{
         width: 34px;
@@ -126,16 +129,29 @@ $desktop-width: 1024px;
         h4{
             font-weight: bold;
             padding-bottom: 27px;
+            @include mobile{
+                padding-bottom: 10px;
+            }
+            @include tablet{
+                padding-bottom: 15px;
+            }
         }
         p{
             padding-bottom: 27px;
+            @include mobile{
+                line-height: 20px;
+                padding-bottom: 20px;
+            }
+            @include tablet{
+                padding-bottom: 15px;
+                line-height: 23px;
+            }
         }
         
     }
 }
 
 .category{
-    padding-top: 40px;
     ul{
         li{
             display: block;
