@@ -1,6 +1,8 @@
 .contact-section {
     font: normal normal 16px/24px var(--primary-font-family);
     color: var(--primary-color);
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 
 .contact-section .bg-white {
