@@ -277,8 +277,38 @@ input:focus {
 }
 
 .img-container {
+	position: relative;
 	display: inline-block;
 	width: 100%;
+	overflow: hidden;
+}
+
+.img-container::after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+	top: -110%;
+	left: -210%;
+	width: 200%;
+	height: 200%;
+	opacity: 0;
+	background: linear-gradient(
+		to right, 
+		rgba(255, 255, 255, 0.13) 0%,
+		rgba(255, 255, 255, 0.13) 77%,
+		rgba(255, 255, 255, 0.5) 92%,
+		rgba(255, 255, 255, 0.0) 100%
+	);
+	transform: skew(45deg);
+}
+
+.img-container:hover::after {
+	opacity: 1;
+	top: -30%;
+	left: -30%;
+	transition-property: left, top, opacity;
+	transition-duration: 1s, 1s, .15s;
+	transition-timing-function: ease;
 }
 
 .img-container img {
@@ -919,13 +949,17 @@ input:focus {
 }
 
 .home-slider .home-nav .nav .nav-item {
-	border: 1px solid #DBDBDB;
+	border-right: 1px solid #DBDBDB;
 	border-top: unset;
 	border-bottom: unset;
 	background-image: url(../img/navbg.png);
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: center center;
+}
+
+.home-slider .home-nav .nav .nav-item:last-child {
+	border-right: 0;
 }
 
 .home-slider .home-nav .nav .nav-item:hover .nav-link .img-container,
@@ -1099,6 +1133,10 @@ input:focus {
 	margin-bottom: 17px;
 }
 
+.footer-top .img-container::after {
+	display: none;
+}
+
 .footer-top p,
 .footer-top strong {
 	font: normal normal 16px/24px var(--primary-font-family);
@@ -1141,12 +1179,22 @@ input:focus {
 	display: block;
 	text-align: center;
 	font: normal normal 16px/18px var(--primary-font-family);
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	color: var(--primary-text-color);
 }
 
 .footer-top .f-email {
 	position: relative;
+}
+
+@media (min-width: 1200px) {
+	.footer-top .f-address {
+		padding-right: 30px;
+	}
+
+	.footer-top .f-phone {
+		padding-right: 30px;
+	}
 }
 
 .footer-top .f-email a {
@@ -1303,6 +1351,15 @@ input:focus {
 	width: 100%;
 }
 
+.page-banner .img-container::after {
+	display: none;
+}
+
+.page-banner .img-container:hover::after {
+	opacity: 0;
+}
+
+
 .page-banner .img-container img {
 	width: 100%;
 }
@@ -1380,6 +1437,10 @@ input:focus {
 	margin-bottom: 27px;
 }
 
+.menu-products-services .img-container::after {
+	display: none;
+}
+
 .featured-news-section .featured-container .feature-new-content .content-container .content-description {
 	font: normal normal 16px/22px var(--primary-font-family);
 	text-align: justify;
@@ -1404,8 +1465,28 @@ input:focus {
 	height: 39px;
 }
 
+.featured-news-section .featured-container .feature-new-content .content-container .btn-more:focus,
+.featured-news-section .featured-container .feature-new-content .content-container .btn-more:hover {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font: normal normal 16px/21px var(--primary-font-family);
+	background-image: url('../img/btnMore-hover.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 162px;
+	height: 39px;
+}
+
+
 .featured-news-section .featured-container .feature-new-content .content-container .btn-more span {
-	padding-left: .5rem;
+	padding-left: 2.5rem;
+}
+
+.featured-news-section .featured-container .feature-new-content .content-container .btn-more:focus span,
+.featured-news-section .featured-container .feature-new-content .content-container .btn-more:hover span {
+	color: var(--secondary-text-color);
 }
 
 .featured-news-section .featured-container .feature-new-content .owl-nav {
@@ -2297,6 +2378,7 @@ input:focus {
 
 .history-section .history-content>.img-container {
 	text-align: center;
+	overflow: unset;
 }
 
 .history-section .history-content>.img-container>img {
@@ -2764,6 +2846,12 @@ input:focus {
 	}
 }
 
+@media (max-width: 1399.99px) {
+	.introduce-section .img-container img {
+		float: left;
+	}
+}
+
 @media (min-width: 1400px) {
 	.history-section .history-content>.img-container>img {
 		width: 60%;
@@ -2946,7 +3034,15 @@ input:focus {
 	height: 210px;
 	position: relative;
 	border-radius: 5000px;
+	overflow: unset;
 	margin-bottom: 22px;
+}
+
+.structure-content .structure-item .img-container:hover::after {
+	opacity: 1;
+	top: unset;
+	left: unset;
+	transition: unset;
 }
 
 .structure-content .structure-item .img-container img{
@@ -2978,7 +3074,11 @@ input:focus {
 	background: rgba(0, 133, 255, 0.3);
 	right: 20px;
 	bottom: 0;
+	opacity: 1;
 	z-index: 3;
+	top: unset;
+	left: unset;
+	transform: skew(0);
 }
 
 .structure-content .structure-item:first-child .name,
@@ -3245,5 +3345,9 @@ input:focus {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: 50% 50%;
+}
+
+.tree-section .img-container::after {
+	display: none;
 }
 /* end gioi thieu */
