@@ -77,7 +77,9 @@ $desktop-width: 1024px;
         padding-left: 30px;
         font-size: 18px;
         font-family: Arial;
-        color: #494D52;
+        a{
+            color: #494D52;
+        }
         flex-grow: 1;
 
         @include mobile {
@@ -104,7 +106,7 @@ $desktop-width: 1024px;
             font-style: italic;
             font-family: Arial;
             font-size: 16px;
-
+            line-height: 22px;
             &:last-child {
                 padding: 22px 0;
             }
@@ -122,7 +124,7 @@ $desktop-width: 1024px;
 
         h4 {
             font-weight: bold;
-            padding-bottom: 27px;
+            padding-bottom: 22px;
 
             @include mobile {
                 padding-bottom: 10px;
@@ -134,8 +136,8 @@ $desktop-width: 1024px;
         }
 
         p {
-            padding-bottom: 27px;
-
+            padding-bottom: 22px;
+            line-height: 22px;
             @include mobile {
                 line-height: 20px;
                 padding-bottom: 20px;

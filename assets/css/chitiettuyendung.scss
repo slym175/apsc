@@ -163,8 +163,9 @@ $desktop-big: 1280px;
             margin-top: 25px;
             transition: all 0.8s;
 
-            &:hover {
-                background: #42ca20;
+            &:focus {
+                outline: none;
+                box-shadow: none;
             }
         }
     }

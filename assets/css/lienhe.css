@@ -3,6 +3,7 @@
     color: var(--primary-color);
     margin-top: -50px;
     margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-section .bg-white {
@@ -66,13 +67,12 @@
 .contact-section .cfc-info {
     position: relative;
 }
-
-.contact-section .cfc-info .smal {
+.contact-section .cfc-info .smal{
     width: 33px;
     height: 32px;
     position: absolute;
     top: -2%;
-    left: 4%;
+    left: 5%;
     z-index: 1000;
     background: var(--secondary-text-color);
     opacity: 0.5;
@@ -85,16 +85,19 @@
     right: 0;
     transform: translate(2.5rem, -50%);
     background: #00387A;
-    padding: 40px 30px 10px 40px;
+    padding: 40px 30px 10px 25px;
     font: normal normal 16px/24px var(--primary-font-family);
     color: #fff;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-section .cfc-info .cfc-info-container img {
     margin-bottom: 40px;
 }
-
+.cfc-info-container img:first-child{
+    width: 70%;
+}
 .cfc-info-container .d-flex img {
     width: 22px;
     height: auto;
@@ -136,5 +139,8 @@
         top: unset;
         transform: translate(0, 0);
         margin-right: calc(0px - 2.5rem - 15px);
+    }
+    .contact-section .cfc-info .smal{
+        display: none;
     }
 }
