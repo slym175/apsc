@@ -13,7 +13,11 @@ $desktop-big: 1280px;
         @content;
     }
 }
-
+@mixin mb-tl {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
 @mixin tablet {
     @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
         @content;
@@ -58,7 +62,7 @@ $desktop-big: 1280px;
         padding-bottom: 20px;
         border-bottom: 1px solid #E2E2E2;
 
-        @include mobile {
+        @include mb-tl {
             display: block;
             line-height: 2;
         }
@@ -79,7 +83,7 @@ $desktop-big: 1280px;
                 border: none;
             }
 
-            @include mobile {
+            @include mb-tl {
                 border: none;
                 padding-left: 0;
             }
