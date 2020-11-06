@@ -7,7 +7,7 @@ $backgroup-mauchu: #494D52;
 $mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
-
+$desktop-big: 1280px;
 @mixin mobile {
     @media (max-width: #{$mobile-width - 1px}) {
         @content;
@@ -21,42 +21,18 @@ $desktop-width: 1024px;
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktop-width}) {
+    @media (min-width: #{$desktop-big}) {
         @content;
     }
 }
-
-.homenext {
-    padding: 15px 0 15px 0;
-    display: flex;
-    justify-items: start;
-    align-items: center;
-
-    .iconnext {
-        padding: 0 12px 0 12px;
-    }
-
-    .homeitem {
-        font: {
-            family: Arial, Helvetica, sans-serif;
-            size: 16px;
-        }
-
-        color: #5A5A5A;
-
-        &:last-child {
-            color: #00387A;
-        }
-
-        &:hover {
-            text-decoration: none;
-        }
+@mixin desktop-big {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-big - 1px}) {
+        @content;
     }
 }
 
 .titletext {
     padding-bottom: 18px;
-
     p {
         font: {
             weight: bold;
@@ -69,7 +45,9 @@ $desktop-width: 1024px;
                 size: 19px;
             }
         }
-
+        @include desktop-big{
+            font-size: 25px;
+        }
         color: $backgroup-mauchu;
         line-height: 139.99%;
     }
@@ -109,6 +87,9 @@ $desktop-width: 1024px;
             @include tablet {
                 font-size: 14px;
             }
+            @include desktop-big{
+                font-size: 13px;
+            }
         }
     }
 }
@@ -123,7 +104,6 @@ $desktop-width: 1024px;
             font-family: $font-text;
             font-style: normal;
             font-weight: bold;
-            font-size: 16px;
             padding-bottom: 20px;
 
             &:first-child {
@@ -148,7 +128,7 @@ $desktop-width: 1024px;
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 5px;
+                top: 6px;
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
@@ -198,6 +178,9 @@ $desktop-width: 1024px;
         font-weight: bold;
         font-size: 23px;
         color: #FFFFFF;
+        @include desktop-big{
+            font-size: 16px;
+        }
     }
 }
 
@@ -235,20 +218,26 @@ $desktop-width: 1024px;
         @include mobile {
             padding-left: 0px;
         }
-
+        @include desktop-big{
+            padding-left: 30px;
+        }
         p {
             font-family: $font-text;
             font-weight: bold;
-            font-size: 16px;
             line-height: 22px;
             color: $backgroup-mauchu;
+            @include desktop-big{
+                font-size: 13px;
+            }
         }
 
         span {
             font-family: $font-text;
-            font-size: 16px;
             line-height: 25px;
             color: $backgroup-mauchu;
+            @include desktop-big{
+                font-size: 13px;
+            }
         }
 
     }
