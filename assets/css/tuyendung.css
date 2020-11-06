@@ -101,6 +101,8 @@
     @media (min-width: 1024px) and (max-width: 1279px) {
       .content-td .btn-ut {
         font-size: 13px; } }
+    .content-td .btn-ut:focus {
+      box-shadow: none; }
 
 .modal-content {
   font-family: Arial, Helvetica, sans-serif; }

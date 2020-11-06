@@ -167,6 +167,7 @@ $mobile-small: 320px;
             family: Arial, Helvetica, sans-serif;
             size: 16px;
         }   
+
         @include mobile {
             padding: .375rem .75rem;
             font-size: 12px;
@@ -178,6 +179,9 @@ $mobile-small: 320px;
         }
         @include desktop-big{
             font-size: 13px;
+        }
+        &:focus{
+            box-shadow: none;
         }
     }
 
