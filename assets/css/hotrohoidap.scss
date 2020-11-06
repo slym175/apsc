@@ -48,12 +48,27 @@ $desktop-width: 1024px;
     border-bottom: 1px solid #E2E2E2;
     padding: 7px 0;
 
+    &:hover{
+        cursor: default;
+        .item-number{
+            background: #CA2026;
+            color: #fff;
+        }
+        span{
+            cursor: default;
+            color: #CA2026;
+        }
+        button{
+            background-color: #CA2026;
+        }
+    }
+
     .item-number {
         width: 70px;
         height: 68px;
-        background: #CA2026;
+        background: #EBEBEB;
         border-radius: 5px;
-        color: #fff;
+        color: #494D52;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -64,11 +79,6 @@ $desktop-width: 1024px;
                 family: Arial, Helvetica, sans-serif;
                 size: 28px;
             }
-        }
-
-        span {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
         }
 
         @include mobile {
@@ -82,9 +92,8 @@ $desktop-width: 1024px;
         font-family: Arial;
         color: #494D52;
         flex-grow: 1;
-
+        line-height: 22px;
         @include mobile {
-            line-height: 23px;
             padding: 0 10px;
             font-size: 15px;
         }
@@ -92,34 +101,27 @@ $desktop-width: 1024px;
 
     .btn-show {
         background-color: #EBEBEB;
-
+        i{
+            color: #787878;
+        }
         &:focus {
+            .fa-plus:before{
+                content: "\f068";
+            }
+            i{
+                color: #fff;
+            }
             box-shadow: none;
         }
     }
 }
 
-.phantrang {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-
-    .page-item {
-        margin-right: 7px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        .page-link {
-            color: #00387A;
-            border: 1px solid #C4C4C4;
-
-            &:focus {
-                background: #00387A;
-                color: #fff;
-                box-shadow: none;
-            }
+.collapsing, .collapse {
+    p{
+        padding-top: 15px;
+        line-height: 22px;
+        &:last-child{
+            padding-bottom: 15px;
         }
     }
 }

@@ -94,8 +94,9 @@
     color: #FFFFFF;
     margin-top: 25px;
     transition: all 0.8s; }
-    .detail-td .utnow .btn-utnow:hover {
-      background: #42ca20; }
+    .detail-td .utnow .btn-utnow:focus {
+      outline: none;
+      box-shadow: none; }
 
 .title-right {
   width: 100%;

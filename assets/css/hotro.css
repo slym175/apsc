@@ -37,8 +37,9 @@
     padding-left: 30px;
     font-size: 18px;
     font-family: Arial;
-    color: #494D52;
     flex-grow: 1; }
+    .item-support label a {
+      color: #494D52; }
     @media (max-width: 479px) {
       .item-support label {
         padding-left: 15px; } }
@@ -55,7 +56,8 @@
     display: block;
     font-style: italic;
     font-family: Arial;
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 22px; }
     .detail-support .text-top i:last-child {
       padding: 22px 0; }
   .detail-support img {
@@ -66,7 +68,7 @@
     font-size: 16px; }
     .detail-support .text-bot h4 {
       font-weight: bold;
-      padding-bottom: 27px; }
+      padding-bottom: 22px; }
       @media (max-width: 479px) {
         .detail-support .text-bot h4 {
           padding-bottom: 10px; } }
@@ -74,7 +76,8 @@
         .detail-support .text-bot h4 {
           padding-bottom: 15px; } }
     .detail-support .text-bot p {
-      padding-bottom: 27px; }
+      padding-bottom: 22px;
+      line-height: 22px; }
       @media (max-width: 479px) {
         .detail-support .text-bot p {
           line-height: 20px;
