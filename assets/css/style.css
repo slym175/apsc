@@ -176,10 +176,10 @@ input:focus {
 	.container-md,
 	.container-sm,
 	.container-xl {
-		max-width: 1320px;
+		max-width: 1365px;
 	}
 }
-
+/* 
 @media (min-width: 1680px) {
 	.container,
 	.container-lg,
@@ -188,6 +188,12 @@ input:focus {
 	.container-xl {
 		max-width: 1600px;
 	}
+} */
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto 
+{
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 /* @media (min-width: 1920px) {
@@ -2230,6 +2236,14 @@ input:focus {
 	padding: 0 6px;
 }
 
+.item-number a{
+	color: var(--primary-text-color);
+}
+
+.item-group:hover .item-number a{
+	color: var(--secondary-text-color);
+}
+
 .news-details-list .item-group:focus .icons-downloadable,
 .news-details-list .item-group:hover .icons-downloadable {
 	background-position: -30px -46px;
@@ -3351,3 +3365,289 @@ input:focus {
 	display: none;
 }
 /* end gioi thieu */
+
+.tree-container .leaves {
+	position: relative;
+}
+
+.tree-container .leaves .img-container{
+	display: inline-block;
+	text-align: center;
+	
+}
+
+.tree-container .leaves .img-container img{
+	width: auto;	
+}
+
+.tree-container .leaves.lv2 {
+	float: right;
+}
+
+.tree-container .leaves.lv2,
+.tree-container .leaves.lv4-right {
+	float: right;
+}
+
+.tree-container .leaves.lv4-left {
+	float: left;
+}
+
+.tree-container .leaves.lv5 {
+	padding-bottom: 50px;
+}
+
+.tree-container .leaves.lv6 ,
+.tree-container .leaves.lv7 {
+	padding-top: 6px;
+	padding-bottom: 6px;
+} 
+
+.tree-container .leaves.lv7 .img-container{
+	text-align: right;
+}
+
+.tree-container .leaves.lv1::before {
+	content: "";
+	position: absolute;
+	width: 3px;
+	height: 70px;
+	bottom: -70px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #FF6611;
+}
+
+.tree-container .leaves.lv1::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -75px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-top: 5px solid #FF6611;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.tree-container .leaves.lv2::before {
+	content: "";
+	position: absolute;
+    width: 250px;
+    height: 3px;
+    left: -270px;
+	top: 50%;
+	transform: translate(0, -50%);
+	background-color: #FF6611;
+}
+
+.tree-container .leaves.lv2::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -275px;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-right: 5px solid #FF6611;
+	border-bottom: 5px solid transparent;
+	border-top: 5px solid transparent;
+}
+
+.tree-container .leaves.lv3::before {
+	content: "";
+	position: absolute;
+	width: 3px;
+	height: 70px;
+	bottom: -70px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #6826D0;
+}
+
+.tree-container .leaves.lv3::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -75px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-top: 5px solid #6826D0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.tree-container .leaves.lv4-right::before {
+	content: "";
+	position: absolute;
+    width: 250px;
+    height: 3px;
+    left: -270px;
+	top: 50%;
+	transform: translate(0, -50%);
+	background-color: #6826D0;
+}
+
+.tree-container .leaves.lv4-right::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -275px;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-right: 5px solid #6826D0;
+	border-bottom: 5px solid transparent;
+	border-top: 5px solid transparent;
+}
+
+.tree-container .leaves.lv4-left::before {
+	content: "";
+	position: absolute;
+    width: 250px;
+    height: 3px;
+    right: -270px;
+	top: 50%;
+	transform: translate(0, -50%);
+	background-color: #6826D0;
+}
+
+.tree-container .leaves.lv4-left::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -275px;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-left: 5px solid #6826D0;
+	border-bottom: 5px solid transparent;
+	border-top: 5px solid transparent;
+}
+
+.tree-container .leaves.lv5::before {
+	content: "";
+	position: absolute;
+	width: 3px;
+	height: 30px;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #2075F4;
+}
+
+.tree-container .leaves.lv5::after {
+	content: "";
+	position: absolute;
+	width: 810px;
+    height: 3px;
+    bottom: 17px;
+    left: 60px;
+	background-color: #2075F4;
+}
+
+.tree-container .leaves.lv6 {
+	padding-top: 25px;
+}
+
+.tree-container .leaves.lv6::before {
+	content: "";
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    top: -20px;
+	left: 61px;
+    transform: translate(-50%, 0);
+    background-color: #2075F4;
+}
+
+.tree-container .leaves.lv6::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 5px;
+    left: 61px;
+	transform: translate(-50%, 0);
+	border-top: 5px solid #2075F4;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.tree-container .d-flex.before {
+	position: relative;
+}
+
+.tree-container .d-flex.before::before {
+	content: "";
+    position: absolute;
+    width: 3px;
+    height: calc(100% - 165px);
+	top: 120px;
+    left: 61px;
+    transform: translate(-50%, 0);
+    background-color: #2075F4;
+}
+
+.tree-container .leaves.lv7::before {
+	content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    top: 50%;
+	left: 60px;
+    transform: translate(0, -50%);
+    background-color: #2075F4;
+}
+
+.tree-container .leaves.lv7::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: calc(50% - 5px);
+	left: 82px;
+	transform: translate(-50%, 0);
+	border-left: 5px solid #2075F4;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+	.tree-container .leaves.lv2::before,
+	.tree-container .leaves.lv4-right::before {
+		width: 160px;
+		left: -180px;
+	}
+
+	.tree-container .leaves.lv2::after,
+	.tree-container .leaves.lv4-right::after {
+		left: -185px;
+	}
+
+	.tree-container .leaves.lv4-left::before {
+		width: 160px;
+		right: -180px;
+	}
+	
+	.tree-container .leaves.lv4-left::after {
+		right: -185px;
+	}
+
+	.tree-container .leaves.lv5::after {
+		width: 665px;
+		left: 48px;
+	}
+
+	.tree-container .leaves.lv6::before,
+	.tree-container .leaves.lv6::after {
+		left: 47px;
+	}
+
+	.tree-container .leaves.lv6 .img-container img {
+		width: 85%;
+	}
+
+}
