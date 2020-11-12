@@ -107,11 +107,18 @@ $(function () {
         }
     })
 
-    new WOW().init();
-
     $('.navbar-collapse').on('show.bs.collapse', function () {
         $(this).addClass("show");
     }).on('hide.bs.collapse', function () {
         $(this).removeClass("show");
     })
 });
+
+wow = new WOW({
+    animateClass: 'animated',
+    offset: 100,
+    callback: function (box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+    }
+});
+wow.init();

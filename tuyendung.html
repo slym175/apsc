@@ -406,68 +406,39 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="row content-modal">
-                                <div class="col-12">
-                                    <span>Ứng tuyển vào vị trí</span>
-                                    <p>Chuyên viên cao cấp quản lý tài sản nợ có (ALM Senior Officer)</p>
-                                    <div class="input-group mt-3 mb-3">
-                                        <input type="text" class="form-control" placeholder="Nơi làm việc">
-                                        <span data-toggle="collapse" data-target="#collapseExample"
-                                            aria-expanded="false" aria-controls="collapseExample">
-                                            <i class="fa fa-angle-down angle-open" aria-hidden="true"></i>
-                                        </span>
+                            <h5>Ứng tuyển vào vị trí</h5>
+                            <h5 class="job_position">Chuyên viên cao cấp quản lý tài sản nợ có (ALM Senior Officer)</h5>
+                            <form class="recruitment_form" action="" method="" enctype="multipart/form-data">
+                                <select class="custom-select">
+                                    <option selected value="default">Nơi làm việc</option>
+                                    <option value="ha-noi">Hà Nội</option>
+                                    <option value="da-nang">Đà Nẵng</option>
+                                    <option value="thanh-pho-ho-chi-minh">TP. Hồ Chí Minh</option>
+                                </select>
+                                <h5 class="div_title">Thông tin liên hệ ứng viên</h5>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Họ tên">
+                                    </div>
+                                    <div class="col">
+                                        <input type="email" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <form>
-                                        <label for="exampleInputEmail1">Thông tin liên hệ ứng viên</label>
-                                        <div class="row mt-2">
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Họ và tên">
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Số điện thoại">
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Địa chỉ">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Số điện thoại">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Địa chỉ">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row profile">
-                                <div class="col-md-9 col-8">
-                                    <label for="exampleInputEmail1">Hồ sơ của bạn</label>
-                                    <input type="email" class="form-control mt-3" disabled
-                                        placeholder="Hỗ trợ định dạng *.doc, *.docx, *.pdf và không quá 2MB">
+                                <h5 class="div_title">Hồ sơ của bạn</h5>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile" placeholder="Hỗ trợ định dạng *.doc, *.docx, *.pdf và không quá 2MB">
+                                    <label class="custom-file-label" for="customFile">Hỗ trợ định dạng *.doc, *.docx, *.pdf và không quá 2MB</label>
                                 </div>
-                                <div class="col-md-3 col-4 pl-0">
-                                    <label for="exampleInputEmail1"></label>
-                                    <button type="button" class="btn uploadfile d-flex mt-3">
-                                        <img src="./assets/image/Group 7856.png" alt="">
-                                        <span>Tải hồ sơ</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer justify-content-start">
-                            <button type="button" class="btn btn-submit">Nộp hồ sơ</button>
-                        </div>
-                        <div class="collapse adress-work" id="collapseExample">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>Hà nội</li>
-                                    <li>Hồ Chí Minh</li>
-                                    <li>Đà Nẵng</li>
-                                </ul>
-                            </div>
+                                <button type="button" class="btn btn-submit">Nộp hồ sơ</button>
+                            </form>
                         </div>
                     </div>
                 </div>

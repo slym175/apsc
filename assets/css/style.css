@@ -3364,7 +3364,10 @@ input:focus {
 .tree-section .img-container::after {
 	display: none;
 }
-/* end gioi thieu */
+
+.tree-container {
+	overflow: hidden;
+}
 
 .tree-container .leaves {
 	position: relative;
@@ -3637,17 +3640,432 @@ input:focus {
 	}
 
 	.tree-container .leaves.lv5::after {
-		width: 665px;
-		left: 48px;
+		width: 670px;
+    	left: 30px;
 	}
 
 	.tree-container .leaves.lv6::before,
 	.tree-container .leaves.lv6::after {
-		left: 47px;
+		left: 31px;
 	}
 
 	.tree-container .leaves.lv6 .img-container img {
 		width: 85%;
+		float: left;
 	}
 
+	.tree-container .d-flex.before::before {
+		left: 25px;
+	}
+
+	.tree-container .leaves.lv7::before {
+		left: 25px;
+		width: 14px;
+	}
+
+	.tree-container .leaves.lv7::after {
+		left: 41px;
+	}
 }
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+	.tree-container .leaves.lv2::before,
+	.tree-container .leaves.lv4-right::before {
+		width: 80px;
+    	left: -100px;
+	}
+
+	.tree-container .leaves.lv2::after,
+	.tree-container .leaves.lv4-right::after {
+		left: -105px;
+	}
+
+	.tree-container .leaves.lv4-left::before {
+		width: 80px;
+		right: -100px;
+	}
+	
+	.tree-container .leaves.lv4-left::after {
+		right: -105px;
+	}
+
+	.tree-container .leaves.lv5::after {
+		width: 555px;
+    	left: 40px;
+	}
+
+	.tree-container .leaves.lv6::before,
+	.tree-container .leaves.lv6::after {
+		left: 40px;
+	}
+
+	.tree-container .leaves.lv7 .img-container {
+		text-align: center;
+	}
+
+	.tree-container .leaves.lv6 .img-container img,
+	.tree-container .leaves.lv7 .img-container img {
+		width: 85%;
+		float: unset;
+	}
+
+	.tree-container .d-flex.before::before {
+		left: 50%;
+		top: 75px;
+		height: calc(100% - 110px);
+	}
+
+	.tree-container .leaves.lv7::before {
+		display: none;
+	}
+
+	.tree-container .leaves.lv7::after {
+		display: none;
+	}
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+	.tree-container .leaves.lv2::before,
+	.tree-container .leaves.lv4-right::before {
+		width: 60px;
+    	left: -70px;
+	}
+
+	.tree-container .leaves.lv2::after,
+	.tree-container .leaves.lv4-right::after {
+		left: -75px;
+	}
+
+	.tree-container .leaves.lv4-left::before {
+		width: 60px;
+		right: -70px;
+	}
+	
+	.tree-container .leaves.lv4-left::after {
+		right: -75px;
+	}
+
+	.tree-container .leaves.lv5::after {
+		width: calc(50% + 2px);
+    	left: 0;
+	}
+
+	.tree-container .d-flex.before {
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.tree-container .d-flex.before::before {
+		display: none;
+	}
+
+	.tree-container .d-flex .leaves.lv6 {
+		flex-basis: 33.3334%;
+		padding-top: 6px;
+	}
+
+	.tree-container .leaves.lv6::before,
+	.tree-container .leaves.lv6::after {
+		left: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	.tree-container .leaves.lv6::before {
+		width: 15px;
+		height: 3px;
+	}
+
+	.tree-container .leaves.lv6::after {
+		display: none;
+	}
+
+	.tree-container .leaves.lv7 .img-container {
+		text-align: center;
+	}
+
+	.tree-container .leaves.lv6 .img-container img,
+	.tree-container .leaves.lv7 .img-container img {
+		width: 85%;
+		float: unset;
+	}
+
+	.tree-container .d-flex.before::before {
+		left: 50%;
+		top: 75px;
+		height: calc(100% - 110px);
+	}
+
+	.tree-container .lv7-container {
+		flex-wrap: wrap;
+		flex-basis: 66.6666%;
+	}
+
+	.tree-container .lv7-container .leaves.lv7 {
+		flex-basis: 50%;
+	}
+
+	.tree-container .leaves.lv7::before {
+		display: none;
+	}
+
+	.tree-container .leaves.lv7::after {
+		display: none;
+	}
+
+	.flex-outter {
+		position: relative;
+	}
+
+	.flex-outter::before {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: calc(100% - 23px);
+		left: 0;
+		top: -20px;
+		background-color: #2075F4;
+	}
+}
+
+@media (max-width: 767.98px) and (min-width: 576px) {
+	.tree-container .leaves .img-container img{
+		width: 80%;
+	}
+
+	.tree-container .leaves.lv1 .img-container img,
+	.tree-container .leaves.lv3 .img-container img,
+	.tree-container .leaves.lv5 .img-container img {
+		width: 40%;
+	}
+
+	.tree-container .leaves.lv2::after,
+	.tree-container .leaves.lv4::after {
+		display: none;
+	}
+
+	.tree-container .leaves.lv2::before,
+	.tree-container .leaves.lv4-right::before {
+		width: 20px;
+    	left: 0;
+	}
+
+	.tree-container .leaves.lv2::after,
+	.tree-container .leaves.lv4-right::after {
+		left: -75px;
+	}
+
+	.tree-container .leaves.lv4-left::before {
+		width: 20px;
+		right: 0;
+	}
+	
+	.tree-container .leaves.lv4-left::after {
+		right: -75px;
+	}
+
+	.tree-container .leaves.lv5::after {
+		width: calc(50% + 2px);
+    	left: 0;
+	}
+
+	.tree-container .d-flex.before {
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.tree-container .d-flex.before::before {
+		display: none;
+	}
+
+	.tree-container .d-flex .leaves.lv6 {
+		flex-basis: 33.3334%;
+		padding-top: 6px;
+	}
+
+	.tree-container .leaves.lv6::before,
+	.tree-container .leaves.lv6::after {
+		left: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	.tree-container .leaves.lv6::before {
+		width: 15px;
+		height: 3px;
+	}
+
+	.tree-container .leaves.lv6::after {
+		display: none;
+	}
+
+	.tree-container .leaves.lv7 .img-container {
+		text-align: center;
+	}
+
+	.tree-container .leaves.lv6 .img-container img,
+	.tree-container .leaves.lv7 .img-container img {
+		width: 85%;
+		float: unset;
+	}
+
+	.tree-container .d-flex.before::before {
+		left: 50%;
+		top: 75px;
+		height: calc(100% - 110px);
+	}
+
+	.tree-container .lv7-container {
+		flex-wrap: wrap;
+		flex-basis: 66.6666%;
+	}
+
+	.tree-container .lv7-container .leaves.lv7 {
+		flex-basis: 50%;
+	}
+
+	.tree-container .leaves.lv7::before {
+		display: none;
+	}
+
+	.tree-container .leaves.lv7::after {
+		display: none;
+	}
+
+	.flex-outter {
+		position: relative;
+	}
+
+	.flex-outter::before {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: calc(100% - 15px);
+		left: 0;
+		top: -20px;
+		background-color: #2075F4;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.tree-container .d-flex {
+		flex-direction: column !important;
+	}
+
+	.tree-container .d-flex::before {
+		display: none;
+	}
+
+	.tree-container .leaves {
+		padding: 6px 0 !important;
+	}
+
+	.tree-container .leaves .img-container img{
+		width: 75%;
+	}
+
+	.tree-container .leaves::before,
+	.tree-container .leaves::after {
+		display: none;
+	}
+
+	.tree-container .leaves .img-container {
+		text-align: center !important;
+	}
+
+	.tree-container .leaves.lv4,
+	.tree-container .leaves.lv2 {
+		float: unset;
+	}
+}
+
+/* Fix Recruiment Modal */
+#exampleModal {
+	padding-right: unset !important;  
+}
+
+@media (min-width: 768px) {
+	.modal-dialog {
+		max-width: 640px;
+	}
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+	content: "Tải file lên";
+    color: #fff;
+    background-color: #00387A;
+    border: unset;
+    border-radius: 0;
+	margin-left: 10px;
+	padding-top: 8px;
+    height: 100%;
+}
+
+.job_position {
+	font: normal bold 18px/24px var(--primary-font-family);
+	color: var(--primary-text-color);
+	margin: 10px 0 24px;
+}
+
+.recruitment_form input,
+.recruitment_form select,
+.recruitment_form h5{
+	margin-bottom: 20px;
+}
+
+.recruitment_form button {
+	display: block;
+	margin-top: 20px;
+}
+
+.recruitment_form input,
+.recruitment_form select {
+	border-radius: 0;
+	border: unset;
+	border-bottom: 1px solid #BFBABA;
+	padding-left: 2px;
+}
+
+.recruitment_form input::placeholder,
+.recruitment_form select::placeholder {
+	color: #9D9D9D;
+}
+
+.recruitment_form *:focus,
+.recruitment_form *:hover {
+	outline: unset;
+	box-shadow: unset;
+}
+
+.recruitment_form button.btn-submit {
+	font: normal bold 16px/22px var(--primary-font-family);
+	color: #fff;
+	background-color: var(--secondary-text-color);
+	border-radius: 5000px;
+	padding: 12px 33px;
+}
+
+.recruitment_form input[type="file"] {
+	border-radius: unset;
+	border: unset;
+	background-color: #EBEBEB;
+}
+
+.custom-file-label {
+	border: unset;
+	border-radius: 0;
+	background-color: #EBEBEB;
+}
+
+.custom-file-label:hover,
+.custom-file-label:focus {
+	outline: none;
+	box-shadow: none;
+	font-size: 14px;
+	color: #919191;
+}
+
+.div_title {
+	font-weight: bold;
+}
+/* End Fix Recruiment Modal */
